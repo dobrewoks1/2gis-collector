@@ -1,5 +1,5 @@
 {
-  "name": "twogis-catalog-collector",
+  "name": "2gis-collector",
   "version": "1.0.0",
   "description": "CLI collector of firms from 2GIS via the official Catalog API (Categories + Places): geo-split search within per-query paging limits, dedup, CSV + SQLite export.",
   "keywords": ["2gis", "catalog-api", "places", "leads", "csv", "sqlite"],

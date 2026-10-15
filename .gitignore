@@ -1,0 +1,9 @@
+node_modules/
+.env
+# results of a collection run (2GIS data must not be republished)
+data/
+output/
+*.log
+npm-debug.log*
+.DS_Store
+.claude/settings.local.json

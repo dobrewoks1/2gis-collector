@@ -1,0 +1,25 @@
+{
+  "name": "twogis-catalog-collector",
+  "version": "1.0.0",
+  "description": "CLI collector of firms from 2GIS via the official Catalog API (Categories + Places): geo-split search within per-query paging limits, dedup, CSV + SQLite export.",
+  "keywords": ["2gis", "catalog-api", "places", "leads", "csv", "sqlite"],
+  "author": "Fyodor Poplavskiy",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "bin": { "2gis-collect": "src/index.js" },
+  "scripts": {
+    "collect": "node src/index.js collect",
+    "collect:omsk": "node src/index.js collect --region \"Omsk\" --niches \"кофейни,стоматологии,автосервисы,салоны красоты,юристы\" --target-per-niche 100 --points-file ./input/omsk_points.json --output ./output",
+    "resolve:region": "node src/index.js resolve-region",
+    "resolve:rubric": "node src/index.js resolve-rubric",
+    "inspect": "node scripts/inspect_db.mjs",
+    "test": "node --test",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5"
+  }
+}
